@@ -1,9 +1,23 @@
-Login <br>
-Correo: 
-<input type="text" [(ngModel)]="user"><br>
-Passwaord: 
-<input type="text" [(ngModel)]="pass"><br><br>
-<button (click)="ingresar()">Ingresar al Sistema</button><br>
-<!--<button (click)="mostrarPE()">MostrarPE</button><br>
-<button (click)="mostrarDP()">mostrarDP</button><br>-->
+<input type="radio" [(ngModel)]="tipo" value="D">Ingresar Perfil personal <br>
+<input type="radio" [(ngModel)]="tipo" value="E">Ingresar Perfl de empresa <br>
+
+<div *ngIf="tipo == 'D'">
+    Login <br>
+    Correo: 
+    <input type="text" [(ngModel)]="user"><br>
+    Password: 
+    <input type="text" [(ngModel)]="pass"><br><br>
+    <button (click)="ingresar()">Ingresar al Sistema</button><br><br>
+</div>
+
+<div *ngIf="tipo == 'E'">
+    Login <br>
+    Correo: 
+    <input type="text" [(ngModel)]="usere"><br>
+    Password: 
+    <input type="text" [(ngModel)]="passe"><br><br>
+    <button (click)="ingresar()">Ingresar al Sistema</button><br><br>
+</div>
+
+<button routerLink="/menu">Regresar a Menu</button>
 

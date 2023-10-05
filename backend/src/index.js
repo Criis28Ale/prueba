@@ -1,6 +1,5 @@
-const app = require("./config/server");
-require("./app/routes/login")(app);
+import app from './app'
 
-app.listen(app.get("port"),
-() => console.log(`Escuchando en servidor puerto : ${app.get("port")}`));
+app.listen(app.get('port'))
 
+console.log('server on port', app.get('port'))

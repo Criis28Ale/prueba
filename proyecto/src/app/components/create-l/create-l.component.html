@@ -1,0 +1,26 @@
+<input type="radio" [(ngModel)]="tipo" value="datoD">Crear un Perfil personal <br>
+<input type="radio" [(ngModel)]="tipo" value="perfilE">Crear un Perfl de empresa <br>
+
+<br><br>
+<div *ngIf="tipo == 'datoD'">
+    Crear Usuario Personal <br>
+    Nombres: <input type="text" [(ngModel)]="nom"><br>
+    Apellidos: <input type="text" [(ngModel)]="apes"><br>
+    DPI: <input type="text" [(ngModel)]="dpi"><br>
+    Fecha: <input type="text" [(ngModel)]="date"><br>
+    Telefono: <input type="text" [(ngModel)]="tel"><br>
+    Correo: <input type="text" [(ngModel)]="correo"><br>
+    Password: <input type="text" [(ngModel)]="password"><br>
+    <button (click)="insertar()">Crear Usuario</button><br>
+</div>
+<div *ngIf="tipo == 'perfilE'">
+    Crear Usuario Empresarial <br>
+    Nombre de Empresa: <input type="text" [(ngModel)]="enom"><br>
+    Nombre del Encargado: <input type="text" [(ngModel)]="nome"><br>
+    DPI del Encargado: <input type="text" [(ngModel)]="dpi_e"><br>
+    Correo: <input type="text" [(ngModel)]="correo_e"><br>
+    Password: <input type="text" [(ngModel)]="password_e"><br>
+    Telefono: <input type="text" [(ngModel)]="tel_e"><br>
+    <button (click)="insertarE()">Crear Usuario</button>
+</div>
+<button routerLink="/menu">Regresar a Menu</button>

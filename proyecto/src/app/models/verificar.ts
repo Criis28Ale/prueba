@@ -1,9 +1,9 @@
 export class verificar {
-    user:string;
+    correo:string;
     pass:string;
 
-    constructor (user: string, password: string) {
-        this.user = user;
+    constructor (correo: string, password: string) {
+        this.correo = correo;
         this.pass = password;
     }
 }
